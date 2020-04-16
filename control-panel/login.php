@@ -26,6 +26,9 @@ require_once("wp-authenticate.php");
    <input type="password" autocomplete="off" placeholder="Password" name="password"/>
    <label><input type="checkbox" name="remember" value="1" />Remember me</label>
    <button type="submit" value="Submit">Submit</button>
+    <br><br>
+    <h1>If you are seeing this page, it means you did not authenticate with our Single Sign On Server</h1>
+    <h2>Please visit: <a href="http://34.66.197.240/wordpress/">34.66.197.240/wordpress</a> to obtain an account</h2>
 </form>
 </body>
 </html>
