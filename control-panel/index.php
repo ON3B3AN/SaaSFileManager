@@ -1,4 +1,6 @@
 <?php
+//First 11 lines sourced from: https://www.webhostinghero.com/wordpress-authentication-integration-with-php/
+
 /*** PREVENT THE PAGE FROM BEING CACHED BY THE WEB BROWSER ***/header("Cache-Control: no-cache, must-revalidate");
 header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
 
@@ -12,7 +14,7 @@ require_once("wp-authenticate.php");
 $CONFIG = '{"lang":"en","error_reporting":false,"show_hidden":false,"hide_Cols":false,"calc_folder":false}';
 
 /**
- * H3K | Tiny File Manager V2.4.1
+ * Sourced from: H3K | Tiny File Manager V2.4.1
  * CCP Programmers | ccpprogrammers@gmail.com
  * https://tinyfilemanager.github.io
  */

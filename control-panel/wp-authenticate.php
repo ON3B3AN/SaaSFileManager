@@ -1,4 +1,6 @@
 <?php
+//Sourced from: https://www.webhostinghero.com/wordpress-authentication-integration-with-php/
+
 /*** UNCOMMENT THIS LINE TO DISPLAY ALL PHP ERRORS ***/// error_reporting(E_ALL);
 
 init();
