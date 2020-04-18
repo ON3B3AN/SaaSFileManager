@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+
+<title>Implementation – Cirrus Providers</title>
+<link rel="dns-prefetch" href="http://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="http://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="Cirrus Providers » Feed" href="http://34.66.197.240/wordpress/feed/">
+<link rel="alternate" type="application/rss+xml" title="Cirrus Providers » Comments Feed" href="http://34.66.197.240/wordpress/comments/feed/">
+		<script>window._wpemojiSettings={"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/34.66.197.240\/wordpress\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);</script><script src="./Implementation – Cirrus Providers_files/wp-emoji-release.min.js" type="text/javascript" defer=""></script>
+		<style>img.wp-smiley,img.emoji{display:inline!important;border:none!important;box-shadow:none!important;height:1em!important;width:1em!important;margin:0 .07em!important;vertical-align:-.1em!important;background:none!important;padding:0!important}</style>
+	<link rel="stylesheet" id="astra-theme-css-css" href="./Implementation – Cirrus Providers_files/style.min.css,qver=2.3.4.pagespeed.ce.4qUl9INDxV.css" media="all">
+<style id="astra-theme-css-inline-css">@font-face{font-family:"Astra";src:url(http://34.66.197.240/wordpress/wp-content/themes/astra/assets/fonts/astra.woff) format("woff") , url(http://34.66.197.240/wordpress/wp-content/themes/astra/assets/fonts/astra.ttf) format("truetype") , url(http://34.66.197.240/wordpress/wp-content/themes/astra/assets/fonts/astra.svg#astra) format("svg");font-weight:normal;font-style:normal;font-display:fallback}html{font-size:100%}a,.page-title{color:#fb2056}a:hover,a:focus{color:#fb2056}body,button,input,select,textarea,.ast-button,.ast-custom-button{font-family:'Noto Sans',sans-serif;font-weight:400;font-size:16px;font-size:1rem;line-height:1.7}blockquote{color:#000}h1,.entry-content h1,h2,.entry-content h2,h3,.entry-content h3,h4,.entry-content h4,h5,.entry-content h5,h6,.entry-content h6,.site-title,.site-title a{font-family:'Montserrat',sans-serif;font-weight:700}.site-title{font-size:22px;font-size:1.375rem}header .site-logo-img .custom-logo-link img{max-width:120px}.astra-logo-svg{width:120px}.ast-archive-description .ast-archive-title{font-size:40px;font-size:2.5rem}.site-header .site-description{font-size:15px;font-size:.9375rem}.entry-title{font-size:30px;font-size:1.875rem}.comment-reply-title{font-size:26px;font-size:1.625rem}.ast-comment-list #cancel-comment-reply-link{font-size:16px;font-size:1rem}h1,.entry-content h1{font-size:64px;font-size:4rem;font-family:'Montserrat',sans-serif;text-transform:uppercase}h2,.entry-content h2{font-size:40px;font-size:2.5rem;font-family:'Montserrat',sans-serif;line-height:1.4;text-transform:uppercase}h3,.entry-content h3{font-size:24px;font-size:1.5rem;font-family:'Montserrat',sans-serif}h4,.entry-content h4{font-size:20px;font-size:1.25rem}h5,.entry-content h5{font-size:18px;font-size:1.125rem}h6,.entry-content h6{font-size:15px;font-size:.9375rem}.ast-single-post .entry-title,.page-title{font-size:30px;font-size:1.875rem}#secondary,#secondary button,#secondary input,#secondary select,#secondary textarea{font-size:16px;font-size:1rem}::selection{background-color:#fb2056;color:#fff}body,h1,.entry-title a,.entry-content h1,h2,.entry-content h2,h3,.entry-content h3,h4,.entry-content h4,h5,.entry-content h5,h6,.entry-content h6,.wc-block-grid__product-title{color:#222}.tagcloud a:hover,.tagcloud a:focus,.tagcloud a.current-item{color:#fff;border-color:#fb2056;background-color:#fb2056}.main-header-menu a,.ast-header-custom-item a{color:#222}.main-header-menu li:hover>a,.main-header-menu li:hover>.ast-menu-toggle,.main-header-menu .ast-masthead-custom-menu-items a:hover,.main-header-menu li.focus>a,.main-header-menu li.focus>.ast-menu-toggle,.main-header-menu .current-menu-item>a,.main-header-menu .current-menu-ancestor>a,.main-header-menu .current_page_item>a,.main-header-menu .current-menu-item>.ast-menu-toggle,.main-header-menu .current-menu-ancestor>.ast-menu-toggle,.main-header-menu .current_page_item>.ast-menu-toggle{color:#fb2056}input:focus,input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="reset"]:focus,input[type="search"]:focus,textarea:focus{border-color:#fb2056}input[type="radio"]:checked,input[type="reset"],input[type="checkbox"]:checked,input[type="checkbox"]:hover:checked,input[type="checkbox"]:focus:checked,input[type="range"]::-webkit-slider-thumb{border-color:#fb2056;background-color:#fb2056;box-shadow:none}.site-footer a:hover+.post-count,.site-footer a:focus+.post-count{background:#fb2056;border-color:#fb2056}.ast-small-footer{color:#d3d3d3}.ast-small-footer>.ast-footer-overlay{background-color:#191919}.ast-small-footer a{color:#fb2056}.ast-small-footer a:hover{color:#fb2056}.footer-adv .footer-adv-overlay{border-top-style:solid;border-top-color:#7a7a7a}.ast-comment-meta{line-height:1.666666667;font-size:13px;font-size:.8125rem}.single .nav-links .nav-previous,.single .nav-links .nav-next,.single .ast-author-details .author-title,.ast-comment-meta{color:#fb2056}.entry-meta,.entry-meta *{line-height:1.45;color:#fb2056}.entry-meta a:hover,.entry-meta a:hover *,.entry-meta a:focus,.entry-meta a:focus *{color:#fb2056}.ast-404-layout-1 .ast-404-text{font-size:200px;font-size:12.5rem}.widget-title{font-size:22px;font-size:1.375rem;color:#222}#cat option,.secondary .calendar_wrap thead a,.secondary .calendar_wrap thead a:visited{color:#fb2056}.secondary .calendar_wrap #today,.ast-progress-val span{background:#fb2056}.secondary a:hover+.post-count,.secondary a:focus+.post-count{background:#fb2056;border-color:#fb2056}.calendar_wrap #today>a{color:#fff}.ast-pagination a,.page-links .page-link,.single .post-navigation a{color:#fb2056}.ast-pagination a:hover,.ast-pagination a:focus,.ast-pagination > span:hover:not(.dots),.ast-pagination > span.current,.page-links > .page-link,.page-links .page-link:hover,.post-navigation a:hover{color:#fb2056}.ast-header-break-point .ast-mobile-menu-buttons-minimal.menu-toggle{background:transparent;color:#fb2056}.ast-header-break-point .ast-mobile-menu-buttons-outline.menu-toggle{background:transparent;border:1px solid #fb2056;color:#fb2056}.ast-header-break-point .ast-mobile-menu-buttons-fill.menu-toggle{background:#fb2056;color:#fff}.elementor-button-wrapper .elementor-button{border-style:solid;border-top-width:0;border-right-width:0;border-left-width:0;border-bottom-width:0}body .elementor-button.elementor-size-sm,body .elementor-button.elementor-size-xs,body .elementor-button.elementor-size-md,body .elementor-button.elementor-size-lg,body .elementor-button.elementor-size-xl,body .elementor-button{border-radius:30px;padding-top:17px;padding-right:40px;padding-bottom:17px;padding-left:40px}.elementor-button-wrapper .elementor-button{border-color:#fb2056;background-color:#fb2056}.elementor-button-wrapper .elementor-button:hover,.elementor-button-wrapper .elementor-button:focus{color:#fff;background-color:#fb2056;border-color:#fb2056}.wp-block-button .wp-block-button__link,.elementor-button-wrapper .elementor-button,.elementor-button-wrapper .elementor-button:visited{color:#fff}.elementor-button-wrapper .elementor-button{font-family:inherit;font-weight:700;line-height:1;text-transform:uppercase}body .elementor-button.elementor-size-sm,body .elementor-button.elementor-size-xs,body .elementor-button.elementor-size-md,body .elementor-button.elementor-size-lg,body .elementor-button.elementor-size-xl,body .elementor-button{font-size:14px;font-size:.875rem}.wp-block-button .wp-block-button__link{font-size:14px;font-size:.875rem;border-radius:30px;padding-top:17px;padding-right:40px;padding-bottom:17px;padding-left:40px}.wp-block-button .wp-block-button__link:hover,.wp-block-button .wp-block-button__link:focus{color:#fff;background-color:#fb2056;border-color:#fb2056}.elementor-widget-heading h2.elementor-heading-title{line-height:1.4}.menu-toggle,button,.ast-button,.ast-custom-button,.button,input#submit,input[type="button"],input[type="submit"],input[type="reset"]{border-style:solid;border-top-width:0;border-right-width:0;border-left-width:0;border-bottom-width:0;color:#fff;border-color:#fb2056;background-color:#fb2056;border-radius:30px;padding-top:17px;padding-right:40px;padding-bottom:17px;padding-left:40px;font-family:inherit;font-weight:700;font-size:14px;font-size:.875rem;line-height:1;text-transform:uppercase}button:focus,.menu-toggle:hover,button:hover,.ast-button:hover,.button:hover,input[type="reset"]:hover,input[type="reset"]:focus,input#submit:hover,input#submit:focus,input[type="button"]:hover,input[type="button"]:focus,input[type="submit"]:hover,input[type="submit"]:focus{color:#fff;background-color:#fb2056;border-color:#fb2056}@media (min-width:545px){.ast-page-builder-template .comments-area,.single.ast-page-builder-template .entry-header,.single.ast-page-builder-template .post-navigation{max-width:1240px;margin-left:auto;margin-right:auto}}@media (max-width:768px){.ast-archive-description .ast-archive-title{font-size:40px}.entry-title{font-size:30px}h1,.entry-content h1{font-size:44px}h2,.entry-content h2{font-size:32px}h3,.entry-content h3{font-size:20px}.ast-single-post .entry-title,.page-title{font-size:30px}}@media (max-width:544px){.comment-reply-title{font-size:24px;font-size:1.6rem}.ast-comment-meta{font-size:12px;font-size:.8rem}.widget-title{font-size:21px;font-size:1.4rem}body,button,input,select,textarea,.ast-button,.ast-custom-button{font-size:15px;font-size:.9375rem}.ast-comment-list #cancel-comment-reply-link{font-size:15px;font-size:.9375rem}#secondary,#secondary button,#secondary input,#secondary select,#secondary textarea{font-size:15px;font-size:.9375rem}.site-title{font-size:20px;font-size:1.25rem}.ast-archive-description .ast-archive-title{font-size:40px}.site-header .site-description{font-size:14px;font-size:.875rem}.entry-title{font-size:30px}h1,.entry-content h1{font-size:30px}h2,.entry-content h2{font-size:24px}h3,.entry-content h3{font-size:20px}h4,.entry-content h4{font-size:19px;font-size:1.1875rem}h5,.entry-content h5{font-size:16px;font-size:1rem}h6,.entry-content h6{font-size:15px;font-size:.9375rem}.ast-single-post .entry-title,.page-title{font-size:30px}.ast-header-break-point .site-branding img,.ast-header-break-point #masthead .site-logo-img .custom-logo-link img{max-width:100px}.astra-logo-svg{width:100px}.ast-header-break-point .site-logo-img .custom-mobile-logo-link img{max-width:100px}}@media (max-width:768px){html{font-size:91.2%}}@media (max-width:544px){html{font-size:100%}}@media (min-width:769px){.ast-container{max-width:1240px}}@media (max-width:770px){.main-header-bar .main-header-bar-navigation{display:none}}.ast-desktop .main-header-menu.submenu-with-border .sub-menu,.ast-desktop .main-header-menu.submenu-with-border .children,.ast-desktop .main-header-menu.submenu-with-border .astra-full-megamenu-wrapper{border-color:#fb2056}.ast-desktop .main-header-menu.submenu-with-border .sub-menu,.ast-desktop .main-header-menu.submenu-with-border .children{border-top-width:2px;border-right-width:0;border-left-width:0;border-bottom-width:0;border-style:solid}.ast-desktop .main-header-menu.submenu-with-border .sub-menu .sub-menu,.ast-desktop .main-header-menu.submenu-with-border .children .children{top:-2px}.ast-desktop .main-header-menu.submenu-with-border .sub-menu a,.ast-desktop .main-header-menu.submenu-with-border .children a{border-bottom-width:0;border-style:solid;border-color:#eaeaea}@media (min-width:769px){.main-header-menu .sub-menu li.ast-left-align-sub-menu:hover>ul,.main-header-menu .sub-menu li.ast-left-align-sub-menu.focus>ul{margin-left:-0}}.ast-small-footer{border-top-style:solid;border-top-width:0;border-top-color:#7a7a7a}.ast-small-footer-wrap{text-align:center}@media (max-width:920px){.ast-404-layout-1 .ast-404-text{font-size:100px;font-size:6.25rem}}.ast-theme-transparent-header #masthead .site-logo-img .transparent-custom-logo .astra-logo-svg{width:133px}.ast-theme-transparent-header #masthead .site-logo-img .transparent-custom-logo img{max-width:133px}@media (min-width:769px){.ast-theme-transparent-header #masthead{position:absolute;left:0;right:0}.ast-theme-transparent-header .main-header-bar,.ast-theme-transparent-header.ast-header-break-point .main-header-bar{background:none}body.elementor-editor-active.ast-theme-transparent-header #masthead,.fl-builder-edit .ast-theme-transparent-header #masthead,body.vc_editor.ast-theme-transparent-header #masthead,body.brz-ed.ast-theme-transparent-header #masthead{z-index:0}.ast-header-break-point.ast-replace-site-logo-transparent.ast-theme-transparent-header .custom-mobile-logo-link{display:none}.ast-header-break-point.ast-replace-site-logo-transparent.ast-theme-transparent-header .transparent-custom-logo{display:inline-block}.ast-theme-transparent-header .ast-above-header{background-image:none;background-color:transparent}.ast-theme-transparent-header .ast-below-header{background-image:none;background-color:transparent}.ast-theme-transparent-header .site-title a,.ast-theme-transparent-header .site-title a:focus,.ast-theme-transparent-header .site-title a:hover,.ast-theme-transparent-header .site-title a:visited{color:#fff}.ast-theme-transparent-header .site-header .site-description{color:#fff}.ast-theme-transparent-header .main-header-menu,.ast-theme-transparent-header.ast-header-break-point .main-header-bar-wrap .main-header-menu,.ast-flyout-menu-enable.ast-header-break-point.ast-theme-transparent-header .main-header-bar-navigation #site-navigation,.ast-fullscreen-menu-enable.ast-header-break-point.ast-theme-transparent-header .main-header-bar-navigation #site-navigation,.ast-flyout-above-menu-enable.ast-header-break-point.ast-theme-transparent-header .ast-above-header-navigation-wrap .ast-above-header-navigation,.ast-flyout-below-menu-enable.ast-header-break-point.ast-theme-transparent-header .ast-below-header-navigation-wrap .ast-below-header-actual-nav,.ast-fullscreen-above-menu-enable.ast-header-break-point.ast-theme-transparent-header .ast-above-header-navigation-wrap,.ast-fullscreen-below-menu-enable.ast-header-break-point.ast-theme-transparent-header .ast-below-header-navigation-wrap{background-color:rgba(255,255,255,0)}.ast-theme-transparent-header .main-header-menu,.ast-theme-transparent-header .main-header-menu a,.ast-theme-transparent-header .ast-masthead-custom-menu-items,.ast-theme-transparent-header .ast-masthead-custom-menu-items a,.ast-theme-transparent-header .main-header-menu li>.ast-menu-toggle,.ast-theme-transparent-header .main-header-menu li>.ast-menu-toggle{color:#fff}.ast-theme-transparent-header .main-header-menu li:hover>a,.ast-theme-transparent-header .main-header-menu li:hover>.ast-menu-toggle,.ast-theme-transparent-header .main-header-menu .ast-masthead-custom-menu-items a:hover,.ast-theme-transparent-header .main-header-menu .focus>a,.ast-theme-transparent-header .main-header-menu .focus>.ast-menu-toggle,.ast-theme-transparent-header .main-header-menu .current-menu-item>a,.ast-theme-transparent-header .main-header-menu .current-menu-ancestor>a,.ast-theme-transparent-header .main-header-menu .current_page_item>a,.ast-theme-transparent-header .main-header-menu .current-menu-item>.ast-menu-toggle,.ast-theme-transparent-header .main-header-menu .current-menu-ancestor>.ast-menu-toggle,.ast-theme-transparent-header .main-header-menu .current_page_item>.ast-menu-toggle{color:#fff}}@media (max-width:768px){.transparent-custom-logo{display:none}}@media (min-width:768px){.ast-transparent-mobile-logo{display:none}}@media (max-width:768px){.ast-transparent-mobile-logo{display:block}}@media (min-width:768px){.ast-theme-transparent-header .main-header-bar{border-bottom-width:0;border-bottom-color:#fff}}.ast-breadcrumbs .trail-browse,.ast-breadcrumbs .trail-items,.ast-breadcrumbs .trail-items li{display:inline-block;margin:0;padding:0;border:none;background:inherit;text-indent:0}.ast-breadcrumbs .trail-browse{font-size:inherit;font-style:inherit;font-weight:inherit;color:inherit}.ast-breadcrumbs .trail-items{list-style:none}.trail-items li::after{padding:0 .3em;content:"\00bb"}.trail-items li:last-of-type::after{display:none}h1,.entry-content h1,h2,.entry-content h2,h3,.entry-content h3,h4,.entry-content h4,h5,.entry-content h5,h6,.entry-content h6{color:#222}.ast-header-break-point .site-header{border-bottom-width:0}@media (min-width:769px){.main-header-bar{border-bottom-width:0}}.ast-safari-browser-less-than-11 .main-header-menu .menu-item,.ast-safari-browser-less-than-11 .main-header-bar .ast-masthead-custom-menu-items{display:block}.main-header-menu .menu-item,.main-header-bar .ast-masthead-custom-menu-items{-js-display:flex;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-moz-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-moz-box-orient:vertical;-moz-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.main-header-menu>.menu-item>a{height:100%;-webkit-box-align:center;-webkit-align-items:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;-js-display:flex;display:flex}.ast-primary-menu-disabled .main-header-bar .ast-masthead-custom-menu-items{flex:unset}.header-main-layout-1 .ast-flex.main-header-container,.header-main-layout-3 .ast-flex.main-header-container{-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;-webkit-box-align:center;-webkit-align-items:center;-moz-box-align:center;-ms-flex-align:center;align-items:center}</style>
+<link rel="stylesheet" id="astra-google-fonts-css" href="./Implementation – Cirrus Providers_files/css" media="all">
+<link rel="stylesheet" id="astra-menu-animation-css" href="./Implementation – Cirrus Providers_files/menu-animation.min.css,qver=2.3.4.pagespeed.ce.cw4JB9_QGb.css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="./Implementation – Cirrus Providers_files/style.min.css,qver=5.3.2.pagespeed.ce.nu3cUbC0ol.css" media="all">
+<link rel="stylesheet" id="elementor-icons-css" href="./Implementation – Cirrus Providers_files/A.elementor-icons.min.css,qver=5.6.2.pagespeed.cf.tKIx9haOij.css" media="all">
+<link rel="stylesheet" id="elementor-animations-css" href="./Implementation – Cirrus Providers_files/animations.min.css,qver=2.9.7.pagespeed.ce.RgG6VQREE3.css" media="all">
+<link rel="stylesheet" id="elementor-frontend-css" href="./Implementation – Cirrus Providers_files/frontend.min.css,qver=2.9.7.pagespeed.ce.Fch4-tb5hE.css" media="all">
+<link rel="stylesheet" id="font-awesome-5-all-css" href="./Implementation – Cirrus Providers_files/A.all.min.css,qver=2.9.7.pagespeed.cf.Xt3eU4aLgn.css" media="all">
+<link rel="stylesheet" id="font-awesome-4-shim-css" href="./Implementation – Cirrus Providers_files/A.v4-shims.min.css,qver=2.9.7.pagespeed.cf.0XlImbwfpC.css" media="all">
+<link rel="stylesheet" id="elementor-post-700-css" href="./Implementation – Cirrus Providers_files/A.post-700.css,qver=1587057029.pagespeed.cf.H_B2wsb2Oz.css" media="all">
+<!--[if IE]>
+<script src='http://34.66.197.240/wordpress/wp-content/themes/astra/assets/js/minified/flexibility.min.js?ver=2.3.4'></script>
+<script>
+flexibility(document.documentElement);
+</script>
+<![endif]-->
+<script src="./Implementation – Cirrus Providers_files/v4-shims.min.js,qver=2.9.7.pagespeed.jm.Pv1hXXq0jZ.js"></script>
+<link rel="https://api.w.org/" href="http://34.66.197.240/wordpress/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://34.66.197.240/wordpress/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://34.66.197.240/wordpress/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.3.2">
+<link rel="canonical" href="http://34.66.197.240/wordpress/tutorial/">
+<link rel="shortlink" href="http://34.66.197.240/wordpress/?p=700">
+<link rel="alternate" type="application/json+oembed" href="http://34.66.197.240/wordpress/wp-json/oembed/1.0/embed?url=http%3A%2F%2F34.66.197.240%2Fwordpress%2Ftutorial%2F">
+<link rel="alternate" type="text/xml+oembed" href="http://34.66.197.240/wordpress/wp-json/oembed/1.0/embed?url=http%3A%2F%2F34.66.197.240%2Fwordpress%2Ftutorial%2F&amp;format=xml">
+<style>.recentcomments a{display:inline!important;padding:0!important;margin:0!important}</style></head>
+
+<body itemtype="https://schema.org/WebPage" itemscope="itemscope" class="page-template-default page page-id-700 wp-custom-logo ast-page-builder-template ast-no-sidebar astra-2.3.4 ast-header-custom-item-inside ast-single-post ast-mobile-inherit-site-logo ast-replace-site-logo-transparent ast-inherit-site-logo-transparent ast-theme-transparent-header elementor-default elementor-kit-454 elementor-page elementor-page-700 ast-mouse-clicked ast-desktop" data-elementor-device-mode="desktop" style="">
+
+<div class="hfeed site" id="page">
+	<a class="skip-link screen-reader-text" href="http://34.66.197.240/wordpress/tutorial/#content">Skip to content</a>
+
+	
+	
+		<header class="site-header ast-primary-submenu-animation-fade header-main-layout-1 ast-primary-menu-enabled ast-menu-toggle-icon ast-mobile-header-inline" id="masthead" itemtype="https://schema.org/WPHeader" itemscope="itemscope">
+
+			
+			
+<div class="main-header-bar-wrap">
+	<div class="main-header-bar">
+				<div class="ast-container">
+
+			<div class="ast-flex main-header-container">
+				
+		<div class="site-branding">
+			<div class="ast-site-identity" itemtype="https://schema.org/Organization" itemscope="itemscope">
+				<span class="site-logo-img"><a href="http://34.66.197.240/wordpress/" class="custom-logo-link transparent-custom-logo" rel="home" itemprop="url"><script data-pagespeed-no-defer="">//<![CDATA[
+(function(){for(var g="function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,a){if(a.get||a.set)throw new TypeError("ES3 does not support getters and setters.");b!=Array.prototype&&b!=Object.prototype&&(b[c]=a.value)},h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k=["String","prototype","repeat"],l=0;l<k.length-1;l++){var m=k[l];m in h||(h[m]={});h=h[m]}var n=k[k.length-1],p=h[n],q=p?p:function(b){var c;if(null==this)throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");c=this+"";if(0>b||1342177279<b)throw new RangeError("Invalid count value");b|=0;for(var a="";b;)if(b&1&&(a+=c),b>>>=1)c+=c;return a};q!=p&&null!=q&&g(h,n,{configurable:!0,writable:!0,value:q});var t=this;function u(b,c){var a=b.split("."),d=t;a[0]in d||!d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===c?d[e]?d=d[e]:d=d[e]={}:d[e]=c};function v(b){var c=b.length;if(0<c){for(var a=Array(c),d=0;d<c;d++)a[d]=b[d];return a}return[]};function w(b){var c=window;if(c.addEventListener)c.addEventListener("load",b,!1);else if(c.attachEvent)c.attachEvent("onload",b);else{var a=c.onload;c.onload=function(){b.call(this);a&&a.call(this)}}};var x;function y(b,c,a,d,e){this.h=b;this.j=c;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=d;this.b={};this.a=[];this.c={}}function z(b,c){var a,d,e=c.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0>=c.offsetWidth&&0>=c.offsetHeight)a=!1;else{d=c.getBoundingClientRect();var f=document.body;a=d.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);d=d.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+d;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.g.height&&d<=b.g.width)}a&&(b.a.push(e),b.c[e]=!0)}y.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&z(this,b)};u("pagespeed.CriticalImages.checkImageForCriticality",function(b){x.checkImageForCriticality(b)});u("pagespeed.CriticalImages.checkCriticalImages",function(){A(x)});function A(b){b.b={};for(var c=["IMG","INPUT"],a=[],d=0;d<c.length;++d)a=a.concat(v(document.getElementsByTagName(c[d])));if(a.length&&a[0].getBoundingClientRect){for(d=0;c=a[d];++d)z(b,c);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(c=!!b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),d=1;d<b.a.length;++d){var e=","+encodeURIComponent(b.a[d]);131072>=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(B())),131072>=a.length+e.length&&(a+=e),c=!0);C=a;if(c){d=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(r){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(D){}}f&&(f.open("POST",d+(-1==d.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}function B(){var b={},c;c=document.getElementsByTagName("IMG");if(!c.length)return{};var a=c[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var d=0;a=c[d];++d){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].o&&a.height>=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var C="";u("pagespeed.CriticalImages.getBeaconData",function(){return C});u("pagespeed.CriticalImages.Run",function(b,c,a,d,e,f){var r=new y(b,c,a,e,f);x=r;d&&w(function(){window.setTimeout(function(){A(r)},0)})});})();pagespeed.CriticalImages.Run('/mod_pagespeed_beacon','http://34.66.197.240/wordpress/tutorial/','8Xxa2XQLv9',true,false,'ditNsJkmz8c');
+//]]></script><img src="data:image/webp;base64,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" class="custom-logo" alt="" srcset="http://34.66.197.240/wordpress/wp-content/uploads/2020/03/xlogo-3.png.pagespeed.ic.bovqmCAX2A.webp 1x, http://34.66.197.240/wordpress/wp-content/uploads/2020/03/xlogo-3.png.pagespeed.ic.bovqmCAX2A.webp 2x" sizes="(max-width: 133px) 100vw, 133px" data-pagespeed-url-hash="3326404925" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a><a href="http://34.66.197.240/wordpress/" class="custom-logo-link ast-transparent-mobile-logo" rel="home" itemprop="url"><img width="400" height="169" src="data:image/webp;base64,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" class="custom-logo" alt="" srcset="http://34.66.197.240/wordpress/wp-content/uploads/2020/03/xcropped-logo-2-1.png.pagespeed.ic.1cG4A70oFl.webp 400w, http://34.66.197.240/wordpress/wp-content/uploads/2020/03/xcropped-logo-2-1-300x127.png.pagespeed.ic.4V1rLCFe7B.webp 300w, http://34.66.197.240/wordpress/wp-content/uploads/2020/03/xcropped-logo-2-1-120x51.png.pagespeed.ic.eg-dUx02uc.webp 120w" sizes="(max-width: 400px) 100vw, 400px" data-pagespeed-url-hash="1100080872" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a></span>			</div>
+		</div>
+
+		<!-- .site-branding -->
+				<div class="ast-mobile-menu-buttons">
+
+			
+					<div class="ast-button-wrap">
+			<button type="button" class="menu-toggle main-header-menu-toggle ast-mobile-menu-buttons-fill" aria-controls="primary-menu" aria-expanded="false" data-index="0">
+				<span class="screen-reader-text">Main Menu</span>
+				<span class="menu-toggle-icon"></span>
+							</button>
+		</div>
+			
+			
+		</div>
+			<div class="ast-main-header-bar-alignment"><div class="main-header-bar-navigation"><nav class="ast-flex-grow-1 navigation-accessibility" id="site-navigation" aria-label="Site Navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope"><div class="main-navigation"><ul id="primary-menu" class="main-header-menu ast-nav-menu ast-flex ast-justify-content-flex-end  submenu-with-border astra-menu-animation-fade " aria-expanded="false"><li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-23"><a href="http://34.66.197.240/wordpress/">Home</a></li>
+<li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a href="http://34.66.197.240/wordpress/project_overview/">Project Overview</a></li>
+<li id="menu-item-707" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-700 current_page_item menu-item-707"><a href="http://34.66.197.240/wordpress/tutorial/" aria-current="page">Implementation</a></li>
+<li id="menu-item-777" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-777"><a href="http://34.66.197.240/wordpress/getting-started/">Getting Started</a></li>
+<li id="menu-item-800" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-800"><a href="http://34.66.197.240/wordpress/project-in-action/">Project In Action</a></li>
+			<li class="ast-masthead-custom-menu-items button-custom-menu-item">
+				<a class="ast-custom-button-link" href="http://35.237.105.177/?auth=sso" target="_self"><div class="ast-button">Login</div></a><a class="menu-link" href="http://35.237.105.177/?auth=sso" target="_self">Login</a>			</li>
+			</ul></div></nav></div></div>			</div><!-- Main Header Container -->
+		</div><!-- ast-row -->
+			</div> <!-- Main Header Bar -->
+</div> <!-- Main Header Bar Wrap -->
+
+			
+		</header><!-- #masthead -->
+
+		
+	
+	
+	<div id="content" class="site-content">
+
+		<div class="ast-container">
+
+		
+
+	<div id="primary" class="content-area primary">
+
+		
+					<main id="main" class="site-main">
+
+				
+					
+					
+
+<article class="post-700 page type-page status-publish ast-article-single" id="post-700" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
+
+	
+	<header class="entry-header ast-header-without-markup">
+
+		
+			</header><!-- .entry-header -->
+
+	<div class="entry-content clear" itemprop="text">
+
+		
+				<div data-elementor-type="wp-page" data-elementor-id="700" class="elementor elementor-700" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-d7d8b56 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="d7d8b56" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-b3d335b elementor-column elementor-col-33 elementor-top-column" data-id="b3d335b" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-fd69444 elementor-column elementor-col-33 elementor-top-column" data-id="fd69444" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-abcc2f2 elementor-widget elementor-widget-heading animated fadeInDown" data-id="abcc2f2" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h1 class="elementor-heading-title elementor-size-default">Service Implementation guide</h1>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-674669b elementor-column elementor-col-33 elementor-top-column" data-id="674669b" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-5c40d7b elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="5c40d7b" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-2ebbf9c elementor-column elementor-col-100 elementor-top-column" data-id="2ebbf9c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-fe195c7 elementor-widget elementor-widget-heading" data-id="fe195c7" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Step 1: Prepare your servers</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-dc051dd elementor-widget elementor-widget-divider" data-id="dc051dd" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-e5f497e elementor-widget elementor-widget-text-editor" data-id="e5f497e" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><ul><li>Create two new Google Cloud instances<ul><li>First Instance:&nbsp;<a href="https://docs.bitnami.com/google/infrastructure/lamp/">Bitnami’s LAMP stack</a> from the GCP Marketplace.<ul><li>Hosts informational website and OAuth SSO Server Plugin</li></ul></li><li>Second Instance: <a href="https://bitnami.com/stack/wordpress/cloud/google">Bitnami’s WordPress LAMP stack</a> from the GCP Marketplace.<ul><li>Hosts Tiny File Manager and WordPress SSO “Client” Plugin</li></ul></li><li>For the sake of this tutorial, we will call the instance that hosts Tiny File Manager&nbsp;<strong>TFM-Instance,&nbsp;</strong>and the one that hosts the website and the WordPress SSO server will be referenced as&nbsp;<strong>WEB-Instance</strong>.&nbsp;&nbsp;</li></ul></li><li>Modify the GCP firewall rules on your instances to allow HTTP <em>and</em> HTTPS traffic.</li><li><span style="font-size: 16px; font-style: normal; font-weight: 400;">Ensure your systems are up to date:</span><br><ul style="font-size: 16px; font-style: normal; font-weight: 400;"><li style="font-size: 16px;"><span style="font-size: 16px; font-weight: bold;">sudo apt update</span></li><li style="font-size: 16px;"><span style="font-size: 16px; font-weight: bold;">sudo apt upgrade</span></li></ul></li></ul></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-3d3fa4d elementor-widget elementor-widget-heading" data-id="3d3fa4d" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Step 2: Download Required Software Packages</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-ad3ba54 elementor-widget elementor-widget-divider" data-id="ad3ba54" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-b454185 elementor-widget elementor-widget-text-editor" data-id="b454185" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><ol><li>Download WordPress on both instances:<ol><li><strong>cd /tmp</strong></li><li><strong>wget https://downloads.bitnami.com/files/stacks/wordpress/X.Y.Z/bitnami-wordpress-X.Y.Z-module-linux-x64-installer.run</strong></li><li><strong>chmod +x ./bitnami-wordpress-X.Y.Z-module-linux-x64-installer.run</strong></li><li><strong>sudo ./bitnami-wordpress-X.Y.Z-module-linux-x64-installer.run</strong></li></ol></li><li>[TFM-Instance] Download our implementation of Tiny File Manager:<ol><li><strong style="font-size: 16px;">git clone https://github.com/saltrupiao/SaaSFileManager.git</strong></li></ol></li></ol></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-079ef65 elementor-widget elementor-widget-heading" data-id="079ef65" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Step 3: Implement Tiny File Manager (TFM-Instance)</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-5b37b34 elementor-widget elementor-widget-divider" data-id="5b37b34" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-f5c6c50 elementor-widget elementor-widget-text-editor" data-id="f5c6c50" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><ol><li>SSH into the TFM-Instance virtual machine.</li><li>Navigate to the directory where you cloned the Tiny File Manager application files.</li><li>Move the application folder into the document root of WordPress:<ol><li><strong>sudo mv ./SaaSFileManager/control-panel/ /opt/bitnami/apps/wordpress/htdocs/.</strong></li></ol></li><li>Modify permissions of the application directory:<ol><li><strong>cd /opt/bitnami/apps/wordpress/htdocs</strong></li><li><strong>sudo chmod 755 control-panel</strong></li></ol></li><li>Create a directory for Tiny File Manager to use for file management:<ol><li><strong>sudo mkdir files</strong></li><li><strong>sudo chmod 777 files</strong></li></ol></li></ol></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-74aad4e elementor-widget elementor-widget-heading" data-id="74aad4e" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Step 4: Configure WordPress on WEB-Instance</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-39d1224 elementor-widget elementor-widget-divider" data-id="39d1224" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-baba548 elementor-widget elementor-widget-text-editor" data-id="baba548" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><ol><li>Login to the WordPress Dashboard at:&nbsp;<strong>http://<span style="color: #ff0000;">[SERVER_IP]</span>/wordpress/wp-admin&nbsp;</strong>using the default credentials.</li><li><a href="https://docs.bitnami.com/aws/how-to/get-started-wordpress-aws-marketplace-beginner/#change-the-wordpress-administrator-password">Change your administrator password</a> for security purposes.</li><li>Install the following Plugins:<ol><li><a href="https://wordpress.org/plugins/oauth2-provider/">WP OAuth Server</a> (SSO Server)</li><li><a href="https://wordpress.org/plugins/elementor/">Elementor</a> (WP Page Editor)</li></ol></li><li>Create a default index page with a login button that links to the following address: http://<span style="font-size: 16px; color: #ff0000;">[TFM-Instance IP]</span><span style="font-size: 16px;">/?auth=sso</span></li></ol></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-accb1c7 elementor-widget elementor-widget-heading" data-id="accb1c7" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Step 5: Configure WordPress on TFM-Instance</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-ec5f2a9 elementor-widget elementor-widget-divider" data-id="ec5f2a9" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-1db8e93 elementor-widget elementor-widget-text-editor" data-id="1db8e93" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><ol><li>Login to the WordPress Dashboard at:&nbsp;<strong>http://<span style="color: #ff0000;">[SERVER_IP]</span>/wp-admin </strong>using the default credentials.</li><li><a href="https://docs.bitnami.com/aws/how-to/get-started-wordpress-aws-marketplace-beginner/#change-the-wordpress-administrator-password">Change your administrator password</a> for security purposes.</li><li>Install the following Plugins:<ol><li><a href="https://wordpress.org/plugins/single-sign-on-client/">Simple Single Sign On</a> (SSO Client)</li><li><a href="https://wordpress.org/plugins/elementor/">Elementor</a> (WP Page Editor)</li><li><a href="https://wordpress.org/plugins/jonradio-private-site/">My Private Site</a> (Part of Securing Tiny File Manager)</li></ol></li><li>Create a landing page – this is where the user will be taken after successfully authenticating with SSO.<ol><li>Somewhere on this landing page, include a prominent button that the user clicks on to launch the Application. The button should link to this address: <strong>http://<span style="color: #ff0000;">[TFM-Instance IP]</span>/control-panel/index.php</strong></li></ol></li><li>Configure My Private Site Plugin:<ol><li>Mouse over&nbsp;<strong>Settings&nbsp;</strong>on the left sidebar of the WordPress Dashboard and click on&nbsp;<strong>Installed Plugins</strong>.</li><li>Under&nbsp;<strong>My Private Site</strong> in the list of plugins, click&nbsp;<strong>Settings</strong>.</li><li>Check the box next to&nbsp;<strong>Private Site&nbsp;</strong>to enable the plugin, click&nbsp;<strong>Save Changes</strong> when checked.</li><li>In the&nbsp;<strong>Specific URL</strong> dialog box, enter: <strong>http://[TFM-Instance IP]/control-panel/index.php</strong></li><li>Under&nbsp;<strong>Visible Exclusions</strong>, check the box next to&nbsp;<strong>Site Home Always Visible?</strong></li><li>Click&nbsp;<strong>Save Changes</strong>.</li></ol></li></ol></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-3871ece elementor-widget elementor-widget-heading" data-id="3871ece" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Step 6: Configure SSO On WEB-Instance</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-7f51b90 elementor-widget elementor-widget-divider" data-id="7f51b90" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-efe4aab elementor-widget elementor-widget-text-editor" data-id="efe4aab" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><ol><li>Login to the WordPress Dashboard at:&nbsp;<strong>http://<span style="color: #ff0000;">[SERVER_IP]</span>/wp-admin&nbsp;</strong>using admin credentials.</li><li>Mouse over&nbsp;<strong>OAuth Server</strong> in the left sidebar and select&nbsp;<strong>Clients</strong>.</li><li>Click&nbsp;<strong>Add New Client</strong> near the top of the page.</li><li>Enter the following information inside the&nbsp;<strong>Client Information</strong> form:<ol><li><span style="text-decoration: underline;">Client Name:</span> TinyFileManager</li><li><span style="text-decoration: underline;">Redirect URI:</span> <strong>http://<span style="color: #ff0000;">[TFM-Instance IP]</span>/?auth=sso</strong></li></ol></li><li>Check&nbsp;<strong>Authorization Code</strong> on the left of the page.</li><li>Click&nbsp;<strong>Create Client</strong>.</li><li>You will then get a generated <span style="color: #ff0000;"><strong>Client ID </strong></span>and<span style="color: #ff0000;"><strong> Client Secret</strong></span>. Note these down, as you will need them in the next step.</li></ol></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-76ceb15 elementor-widget elementor-widget-heading" data-id="76ceb15" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Step 7: Configure SSO on TFM-Instance</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-d0209de elementor-widget elementor-widget-divider" data-id="d0209de" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-8017c1b elementor-widget elementor-widget-text-editor" data-id="8017c1b" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><ol><li>Login to the WordPress Dashboard at:&nbsp;<strong>http://<span style="color: #ff0000;">[SERVER_IP]</span>/wp-admin&nbsp;</strong>using admin credentials.</li><li>Mouse over&nbsp;<strong>Settings</strong> in the left sidebar and click on <strong>Single Sign On</strong></li><li>Click on the&nbsp; <strong>Step 2: Configuration</strong> dropdown.</li><li>Enter the Client ID and Client Secret you received in the previous step.</li><li>For&nbsp;<strong>OAuth Server URL</strong>, type: <strong>http://<span style="color: #ff0000;">[WEB-INSTANCE IP]</span>/wordpress/</strong></li><li>Click <b>Save Changes</b>.</li></ol></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-28b0dfb elementor-widget elementor-widget-heading" data-id="28b0dfb" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Step 8: User Configuration</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-0209565 elementor-widget elementor-widget-divider" data-id="0209565" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-6c5e22c elementor-widget elementor-widget-text-editor" data-id="6c5e22c" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Users of this service may create an account using the WordPress Account Registration service.</p><p>If this was going into production, we would ideally implement a step with a billing API, where they have to enter credit card information to pay for this Software-as-a-Service.&nbsp;</p><p>All administrator user account configuration occurs in the Dashboard of the WordPress Dashboard of WEB-INSTANCE.</p><p>All user accounts can be created and managed by navigating to the <strong>Users</strong> page in the WordPress Dashboard.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-36a5d05 elementor-widget elementor-widget-divider" data-id="36a5d05" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-cfa3e1b elementor-widget elementor-widget-heading" data-id="cfa3e1b" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">References</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-50801f7 elementor-widget elementor-widget-text-editor" data-id="50801f7" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><ul><li><em>Tiny File Manager</em> by&nbsp;<span style="font-size: 16px; font-style: normal; font-weight: 400;">Prasath Mani:</span>&nbsp;<a href="https://github.com/prasathmani/tinyfilemanager">https://github.com/prasathmani/tinyfilemanager</a></li><li><em>How to Setup Single Sign On Between 2 WordPress Sites</em> by Justin Greer: <a href="https://www.youtube.com/watch?v=2JBr9uxO2Yc">https://www.youtube.com/watch?v=2JBr9uxO2Yc</a></li><li><em>How to Integrate WordPress Authentication in External PHP Applications</em> by Stéphane Brault: &nbsp;<a href="https://www.webhostinghero.com/wordpress-authentication-integration-with-php/">https://www.webhostinghero.com/wordpress-authentication-integration-with-php/</a></li><li><em>Add Applications On Top Of LAMP</em> by Bitnami: <a href="https://docs.bitnami.com/google/infrastructure/lamp/get-started/add-applications-amp/">https://docs.bitnami.com/google/infrastructure/lamp/get-started/add-applications-amp/</a></li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+		
+		
+		
+	</div><!-- .entry-content .clear -->
+
+	
+	
+</article><!-- #post-## -->
+
+
+					
+					
+				
+			</main><!-- #main -->
+			
+		
+	</div><!-- #primary -->
+
+
+			
+			</div> <!-- ast-container -->
+
+		</div><!-- #content -->
+
+		
+		
+		
+		<footer class="site-footer" id="colophon" itemtype="https://schema.org/WPFooter" itemscope="itemscope">
+
+			
+			
+<div class="ast-small-footer footer-sml-layout-1">
+	<div class="ast-footer-overlay">
+		<div class="ast-container">
+			<div class="ast-small-footer-wrap">
+				
+									<div class="ast-small-footer-section ast-small-footer-section-2">
+						Copyright © 2020 Alec Breslow, Travis Thayer, Sal Trupiano.					</div>
+				
+			</div><!-- .ast-row .ast-small-footer-wrap -->
+		</div><!-- .ast-container -->
+	</div><!-- .ast-footer-overlay -->
+</div><!-- .ast-small-footer-->
+
+			
+		</footer><!-- #colophon -->
+		
+		
+	</div><!-- #page -->
+
+	
+	<script>var astra={"break_point":"770","isRtl":""};</script>
+<script src="./Implementation – Cirrus Providers_files/wp-content,_themes,_astra,_assets,_js,_minified,_style.min.js,qver==2.3.4+wp-includes,_js,_wp-embed.min.js,qver==5.3.2.pagespeed.jc.-9dRcLmScA.js"></script><script>eval(mod_pagespeed_b2ocudqtDr);</script>
+<script>eval(mod_pagespeed_5Gui6xy1u1);</script>
+<script src="./Implementation – Cirrus Providers_files/jquery.js,qver=1.12.4-wp.pagespeed.jm.gp20iU5FlU.js"></script>
+<script src="./Implementation – Cirrus Providers_files/wp-includes,_js,_jquery,_jquery-migrate.min.js,qver==1.4.1+wp-content,_plugins,_elementor,_assets,_js,_frontend-modules.min.js,qver==2.9.7+wp-includes,_js,_jquery,_ui,_position.min.js,qver==1.11.4+wp-content,_plugins,_elementor,_assets,_lib,_dialog,_di.js"></script><script>eval(mod_pagespeed_3u5MvPoAMB);</script>
+<script>eval(mod_pagespeed_g9I4IPdD73);</script>
+<script>eval(mod_pagespeed_AY0fDATG0D);</script>
+<script>eval(mod_pagespeed_fClVz$wsFT);</script>
+<script src="./Implementation – Cirrus Providers_files/waypoints.min.js,qver=4.0.2.pagespeed.ce.OBnDVp2nHa.js"></script>
+<script src="./Implementation – Cirrus Providers_files/swiper.min.js,qver=5.3.6.pagespeed.jm.0kJnTpXBgJ.js"></script>
+<script src="./Implementation – Cirrus Providers_files/share-link.min.js,qver=2.9.7.pagespeed.jm.iru9sO60zg.js"></script>
+<script>var elementorFrontendConfig={"environmentMode":{"edit":false,"wpPreview":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","downloadImage":"Download image"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.9.7","urls":{"assets":"http:\/\/34.66.197.240\/wordpress\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes","elementor_lightbox_enable_counter":"yes","elementor_lightbox_enable_fullscreen":"yes","elementor_lightbox_enable_zoom":"yes","elementor_lightbox_enable_share":"yes","elementor_lightbox_title_src":"title","elementor_lightbox_description_src":"description"},"editorPreferences":[]},"post":{"id":700,"title":"Implementation%20%E2%80%93%20Cirrus%20Providers","excerpt":"","featuredImage":false}};</script>
+<script src="./Implementation – Cirrus Providers_files/frontend.min.js,qver=2.9.7.pagespeed.jm.XqSRsgfSVy.js"></script><span id="elementor-device-mode" class="elementor-screen-only"></span>
+			<script>/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);</script>
+			
+	
+
+</body></html>
