@@ -9,5 +9,5 @@ Alec Breslow, Travis Thayer, Sal Trupiano
 ## Project Information
 Developed for CSI-3670: Advanced System Administration at Oakland University, School of Engineering and Computer Science
 
-## Implementation Guide:
+## Implementation Guide
 For the full guide on implementation, please render Implementation-Guide.html in your browser of choice and follow the provided steps.
